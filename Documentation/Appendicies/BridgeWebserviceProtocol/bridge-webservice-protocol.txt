@@ -1,0 +1,11 @@
+Message					Response
+--------------------------------------
+getuser:id				json
+adduser:json			id
+removeuser:id			true/false
+getplant:id				json
+addplant:json			id
+removeplant:id			true/false
+getplantmonitor:id		json
+
+'\0' for delimitation
