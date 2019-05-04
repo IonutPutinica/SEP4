@@ -1,0 +1,12 @@
+Description						Method		URI
+========================================================
+Get user profile data			GET			/user/[ID]
+Add user profile				POST		/user/
+Modify user profile				PUT			/user/[ID]
+Delete user profile				DELETE		/user/[ID]
+Get plant profile data			GET			/plantprofile/[ID]
+Add plant profile				POST		/plantprofile/
+Delete plant profile			DELETE		/plantprofile/[ID]
+Modify plant profile			PUT			/plantprofile/[ID]
+Get plant stats					GET			/plant/[ID]
+Water the plant					POST		/water/[ID]
