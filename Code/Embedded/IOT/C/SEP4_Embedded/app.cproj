@@ -1,0 +1,340 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003" ToolsVersion="14.0">
+  <PropertyGroup>
+    <SchemaVersion>2.0</SchemaVersion>
+    <ProjectVersion>7.0</ProjectVersion>
+    <ToolchainName>com.Atmel.AVRGCC8.C</ToolchainName>
+    <ProjectGuid>dce6c7e3-ee26-4d79-826b-08594b9ad897</ProjectGuid>
+    <avrdevice>ATmega2560</avrdevice>
+    <avrdeviceseries>none</avrdeviceseries>
+    <OutputType>Executable</OutputType>
+    <Language>C</Language>
+    <OutputFileName>$(MSBuildProjectName)</OutputFileName>
+    <OutputFileExtension>.elf</OutputFileExtension>
+    <OutputDirectory>$(MSBuildProjectDirectory)\$(Configuration)</OutputDirectory>
+    <AssemblyName>app</AssemblyName>
+    <Name>app</Name>
+    <RootNamespace>app</RootNamespace>
+    <ToolchainFlavour>Native</ToolchainFlavour>
+    <KeepTimersRunning>true</KeepTimersRunning>
+    <OverrideVtor>false</OverrideVtor>
+    <CacheFlash>true</CacheFlash>
+    <ProgFlashFromRam>true</ProgFlashFromRam>
+    <RamSnippetAddress>0x20000000</RamSnippetAddress>
+    <UncachedRange />
+    <preserveEEPROM>true</preserveEEPROM>
+    <OverrideVtorValue>exception_table</OverrideVtorValue>
+    <BootSegment>2</BootSegment>
+    <ResetRule>0</ResetRule>
+    <eraseonlaunchrule>0</eraseonlaunchrule>
+    <EraseKey />
+    <AsfFrameworkConfig>
+      <framework-data xmlns="">
+        <options />
+        <configurations />
+        <files />
+        <documentation help="" />
+        <offline-documentation help="" />
+        <dependencies>
+          <content-extension eid="atmel.asf" uuidref="Atmel.ASF" version="3.40.0" />
+        </dependencies>
+      </framework-data>
+    </AsfFrameworkConfig>
+    <avrtool>com.atmel.avrdbg.tool.atmelice</avrtool>
+    <avrtoolserialnumber>J41800072819</avrtoolserialnumber>
+    <avrdeviceexpectedsignature>0x1E9801</avrdeviceexpectedsignature>
+    <custom>
+      <ToolOptions>
+        <InterfaceProperties>
+        </InterfaceProperties>
+        <InterfaceName>
+        </InterfaceName>
+      </ToolOptions>
+      <ToolType>custom</ToolType>
+      <ToolNumber>
+      </ToolNumber>
+      <ToolName>Custom Programming Tool</ToolName>
+    </custom>
+    <avrtoolinterface>JTAG</avrtoolinterface>
+    <com_atmel_avrdbg_tool_atmelice>
+      <ToolOptions>
+        <InterfaceProperties>
+          <JtagDbgClock>1200000</JtagDbgClock>
+          <JtagEnableExtResetOnStartSession>false</JtagEnableExtResetOnStartSession>
+          <JtagInChain>true</JtagInChain>
+          <JtagDevicesBefore>0</JtagDevicesBefore>
+          <JtagDevicesAfter>0</JtagDevicesAfter>
+          <JtagInstrBitsBefore>0</JtagInstrBitsBefore>
+          <JtagInstrBitsAfter>0</JtagInstrBitsAfter>
+          <JtagSelectedDeviceIndexInChain>0</JtagSelectedDeviceIndexInChain>
+          <JtagDaisyChainDevices>Device/TAP with ID 0x5980103F,1501564991,4</JtagDaisyChainDevices>
+        </InterfaceProperties>
+        <InterfaceName>JTAG</InterfaceName>
+      </ToolOptions>
+      <ToolType>com.atmel.avrdbg.tool.atmelice</ToolType>
+      <ToolNumber>J41800072819</ToolNumber>
+      <ToolName>Atmel-ICE</ToolName>
+    </com_atmel_avrdbg_tool_atmelice>
+    <avrtoolinterfaceclock>1200000</avrtoolinterfaceclock>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)' == 'Release' ">
+    <ToolchainSettings>
+      <AvrGcc>
+        <avrgcc.common.Device>-mmcu=atmega2560 -B "%24(PackRepoDir)\atmel\ATmega_DFP\1.2.209\gcc\dev\atmega2560"</avrgcc.common.Device>
+        <avrgcc.common.optimization.RelaxBranches>True</avrgcc.common.optimization.RelaxBranches>
+        <avrgcc.common.outputfiles.hex>True</avrgcc.common.outputfiles.hex>
+        <avrgcc.common.outputfiles.lss>True</avrgcc.common.outputfiles.lss>
+        <avrgcc.common.outputfiles.eep>True</avrgcc.common.outputfiles.eep>
+        <avrgcc.common.outputfiles.srec>True</avrgcc.common.outputfiles.srec>
+        <avrgcc.common.outputfiles.usersignatures>False</avrgcc.common.outputfiles.usersignatures>
+        <avrgcc.compiler.general.ChangeDefaultCharTypeUnsigned>True</avrgcc.compiler.general.ChangeDefaultCharTypeUnsigned>
+        <avrgcc.compiler.general.ChangeDefaultBitFieldUnsigned>True</avrgcc.compiler.general.ChangeDefaultBitFieldUnsigned>
+        <avrgcc.compiler.symbols.DefSymbols>
+          <ListValues>
+            <Value>NDEBUG</Value>
+          </ListValues>
+        </avrgcc.compiler.symbols.DefSymbols>
+        <avrgcc.compiler.directories.IncludePaths>
+          <ListValues>
+            <Value>%24(PackRepoDir)\atmel\ATmega_DFP\1.2.209\include</Value>
+          </ListValues>
+        </avrgcc.compiler.directories.IncludePaths>
+        <avrgcc.compiler.optimization.level>Optimize for size (-Os)</avrgcc.compiler.optimization.level>
+        <avrgcc.compiler.optimization.PackStructureMembers>True</avrgcc.compiler.optimization.PackStructureMembers>
+        <avrgcc.compiler.optimization.AllocateBytesNeededForEnum>True</avrgcc.compiler.optimization.AllocateBytesNeededForEnum>
+        <avrgcc.compiler.warnings.AllWarnings>True</avrgcc.compiler.warnings.AllWarnings>
+        <avrgcc.linker.libraries.Libraries>
+          <ListValues>
+            <Value>libm</Value>
+          </ListValues>
+        </avrgcc.linker.libraries.Libraries>
+        <avrgcc.assembler.general.IncludePaths>
+          <ListValues>
+            <Value>%24(PackRepoDir)\atmel\ATmega_DFP\1.2.209\include</Value>
+          </ListValues>
+        </avrgcc.assembler.general.IncludePaths>
+      </AvrGcc>
+    </ToolchainSettings>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)' == 'Debug' ">
+    <ToolchainSettings>
+      <AvrGcc>
+        <avrgcc.common.Device>-mmcu=atmega2560 -B "%24(PackRepoDir)\atmel\ATmega_DFP\1.2.209\gcc\dev\atmega2560"</avrgcc.common.Device>
+        <avrgcc.common.optimization.RelaxBranches>True</avrgcc.common.optimization.RelaxBranches>
+        <avrgcc.common.outputfiles.hex>True</avrgcc.common.outputfiles.hex>
+        <avrgcc.common.outputfiles.lss>True</avrgcc.common.outputfiles.lss>
+        <avrgcc.common.outputfiles.eep>True</avrgcc.common.outputfiles.eep>
+        <avrgcc.common.outputfiles.srec>True</avrgcc.common.outputfiles.srec>
+        <avrgcc.common.outputfiles.usersignatures>False</avrgcc.common.outputfiles.usersignatures>
+        <avrgcc.compiler.general.ChangeDefaultCharTypeUnsigned>True</avrgcc.compiler.general.ChangeDefaultCharTypeUnsigned>
+        <avrgcc.compiler.general.ChangeDefaultBitFieldUnsigned>True</avrgcc.compiler.general.ChangeDefaultBitFieldUnsigned>
+        <avrgcc.compiler.symbols.DefSymbols>
+          <ListValues>
+            <Value>DEBUG</Value>
+            <Value>F_CPU=16000000L</Value>
+          </ListValues>
+        </avrgcc.compiler.symbols.DefSymbols>
+        <avrgcc.compiler.directories.IncludePaths>
+          <ListValues>
+            <Value>%24(PackRepoDir)\atmel\ATmega_DFP\1.2.209\include</Value>
+            <Value>../../../../../../Stdio_lib</Value>
+            <Value>../VIA_FreeRTOS_AVRMEGA-master/src</Value>
+            <Value>../VIA_FreeRTOS_AVRMEGA-master/FreeRTOSTraceDriver</Value>
+          </ListValues>
+        </avrgcc.compiler.directories.IncludePaths>
+        <avrgcc.compiler.optimization.level>Optimize (-O1)</avrgcc.compiler.optimization.level>
+        <avrgcc.compiler.optimization.PackStructureMembers>True</avrgcc.compiler.optimization.PackStructureMembers>
+        <avrgcc.compiler.optimization.AllocateBytesNeededForEnum>True</avrgcc.compiler.optimization.AllocateBytesNeededForEnum>
+        <avrgcc.compiler.optimization.DebugLevel>Default (-g2)</avrgcc.compiler.optimization.DebugLevel>
+        <avrgcc.compiler.warnings.AllWarnings>True</avrgcc.compiler.warnings.AllWarnings>
+        <avrgcc.linker.libraries.Libraries>
+          <ListValues>
+            <Value>libm</Value>
+            <Value>serialLib</Value>
+            <Value>IotLibrary</Value>
+          </ListValues>
+        </avrgcc.linker.libraries.Libraries>
+        <avrgcc.linker.libraries.LibrarySearchPaths>
+          <ListValues>
+            <Value>../../../../../..</Value>
+            <Value>../Lib_files/Stdio_lib</Value>
+          </ListValues>
+        </avrgcc.linker.libraries.LibrarySearchPaths>
+        <avrgcc.linker.miscellaneous.LinkerFlags>-Wl,-u,vfprintf</avrgcc.linker.miscellaneous.LinkerFlags>
+        <avrgcc.assembler.general.IncludePaths>
+          <ListValues>
+            <Value>%24(PackRepoDir)\atmel\ATmega_DFP\1.2.209\include</Value>
+          </ListValues>
+        </avrgcc.assembler.general.IncludePaths>
+        <avrgcc.assembler.debugging.DebugLevel>Default (-Wa,-g)</avrgcc.assembler.debugging.DebugLevel>
+      </AvrGcc>
+    </ToolchainSettings>
+  </PropertyGroup>
+  <ItemGroup>
+    <Compile Include="LoRa_files\e_LoRa_return_code_t.h">
+      <SubType>compile</SubType>
+    </Compile>
+    <Compile Include="main.c">
+      <SubType>compile</SubType>
+    </Compile>
+    <Compile Include="tasks\CO2_sensor.c">
+      <SubType>compile</SubType>
+    </Compile>
+    <Compile Include="tasks\CO2_sensor.h">
+      <SubType>compile</SubType>
+    </Compile>
+    <Compile Include="tasks\light_sensor.c">
+      <SubType>compile</SubType>
+    </Compile>
+    <Compile Include="tasks\light_sensor.h">
+      <SubType>compile</SubType>
+    </Compile>
+    <Compile Include="tasks\LoRaWAN.c">
+      <SubType>compile</SubType>
+    </Compile>
+    <Compile Include="tasks\LoRaWAN.h">
+      <SubType>compile</SubType>
+    </Compile>
+    <Compile Include="tasks\servo_motor.c">
+      <SubType>compile</SubType>
+    </Compile>
+    <Compile Include="tasks\servo_motor.h">
+      <SubType>compile</SubType>
+    </Compile>
+    <Compile Include="tasks\temp_sensor.c">
+      <SubType>compile</SubType>
+    </Compile>
+    <Compile Include="tasks\temp_sensor.h">
+      <SubType>compile</SubType>
+    </Compile>
+    <Compile Include="VIA_FreeRTOS_AVRMEGA-master\FreeRTOSTraceDriver\FreeRTOSTraceDriver.c">
+      <SubType>compile</SubType>
+    </Compile>
+    <Compile Include="VIA_FreeRTOS_AVRMEGA-master\FreeRTOSTraceDriver\FreeRTOSTraceDriver.h">
+      <SubType>compile</SubType>
+    </Compile>
+    <Compile Include="VIA_FreeRTOS_AVRMEGA-master\src\ATMEGA_FreeRTOS.h">
+      <SubType>compile</SubType>
+    </Compile>
+    <Compile Include="VIA_FreeRTOS_AVRMEGA-master\src\croutine.c">
+      <SubType>compile</SubType>
+    </Compile>
+    <Compile Include="VIA_FreeRTOS_AVRMEGA-master\src\croutine.h">
+      <SubType>compile</SubType>
+    </Compile>
+    <Compile Include="VIA_FreeRTOS_AVRMEGA-master\src\event_groups.c">
+      <SubType>compile</SubType>
+    </Compile>
+    <Compile Include="VIA_FreeRTOS_AVRMEGA-master\src\event_groups.h">
+      <SubType>compile</SubType>
+    </Compile>
+    <Compile Include="VIA_FreeRTOS_AVRMEGA-master\src\FreeRTOSConfig.h">
+      <SubType>compile</SubType>
+    </Compile>
+    <Compile Include="VIA_FreeRTOS_AVRMEGA-master\src\FreeRTOSVariant.h">
+      <SubType>compile</SubType>
+    </Compile>
+    <Compile Include="VIA_FreeRTOS_AVRMEGA-master\src\heap_3.c">
+      <SubType>compile</SubType>
+    </Compile>
+    <Compile Include="VIA_FreeRTOS_AVRMEGA-master\src\hih8120.h">
+      <SubType>compile</SubType>
+    </Compile>
+    <Compile Include="VIA_FreeRTOS_AVRMEGA-master\src\list.c">
+      <SubType>compile</SubType>
+    </Compile>
+    <Compile Include="VIA_FreeRTOS_AVRMEGA-master\src\list.h">
+      <SubType>compile</SubType>
+    </Compile>
+    <Compile Include="VIA_FreeRTOS_AVRMEGA-master\src\message_buffer.h">
+      <SubType>compile</SubType>
+    </Compile>
+    <Compile Include="VIA_FreeRTOS_AVRMEGA-master\src\mh_z19.h">
+      <SubType>compile</SubType>
+    </Compile>
+    <Compile Include="VIA_FreeRTOS_AVRMEGA-master\src\mpu_wrappers.h">
+      <SubType>compile</SubType>
+    </Compile>
+    <Compile Include="VIA_FreeRTOS_AVRMEGA-master\src\plantdata.h">
+      <SubType>compile</SubType>
+    </Compile>
+    <Compile Include="VIA_FreeRTOS_AVRMEGA-master\src\port.c">
+      <SubType>compile</SubType>
+    </Compile>
+    <Compile Include="VIA_FreeRTOS_AVRMEGA-master\src\portable.h">
+      <SubType>compile</SubType>
+    </Compile>
+    <Compile Include="VIA_FreeRTOS_AVRMEGA-master\src\portmacro.h">
+      <SubType>compile</SubType>
+    </Compile>
+    <Compile Include="VIA_FreeRTOS_AVRMEGA-master\src\projdefs.h">
+      <SubType>compile</SubType>
+    </Compile>
+    <Compile Include="VIA_FreeRTOS_AVRMEGA-master\src\queue.c">
+      <SubType>compile</SubType>
+    </Compile>
+    <Compile Include="VIA_FreeRTOS_AVRMEGA-master\src\queue.h">
+      <SubType>compile</SubType>
+    </Compile>
+    <Compile Include="VIA_FreeRTOS_AVRMEGA-master\src\semphr.h">
+      <SubType>compile</SubType>
+    </Compile>
+    <Compile Include="VIA_FreeRTOS_AVRMEGA-master\src\serial\serial.h">
+      <SubType>compile</SubType>
+    </Compile>
+    <Compile Include="VIA_FreeRTOS_AVRMEGA-master\src\stack_macros.h">
+      <SubType>compile</SubType>
+    </Compile>
+    <Compile Include="VIA_FreeRTOS_AVRMEGA-master\src\stream_buffer.c">
+      <SubType>compile</SubType>
+    </Compile>
+    <Compile Include="VIA_FreeRTOS_AVRMEGA-master\src\stream_buffer.h">
+      <SubType>compile</SubType>
+    </Compile>
+    <Compile Include="VIA_FreeRTOS_AVRMEGA-master\src\task.h">
+      <SubType>compile</SubType>
+    </Compile>
+    <Compile Include="VIA_FreeRTOS_AVRMEGA-master\src\tasks.c">
+      <SubType>compile</SubType>
+    </Compile>
+    <Compile Include="VIA_FreeRTOS_AVRMEGA-master\src\timers.c">
+      <SubType>compile</SubType>
+    </Compile>
+    <Compile Include="VIA_FreeRTOS_AVRMEGA-master\src\timers.h">
+      <SubType>compile</SubType>
+    </Compile>
+    <Compile Include="VIA_FreeRTOS_AVRMEGA-master\src\tsl2591.h">
+      <SubType>compile</SubType>
+    </Compile>
+    <Compile Include="VIA_FreeRTOS_AVRMEGA-master\src\variantHooks.c">
+      <SubType>compile</SubType>
+    </Compile>
+  </ItemGroup>
+  <ItemGroup>
+    <Folder Include="LoRa_files" />
+    <Folder Include="tasks" />
+    <Folder Include="VIA_FreeRTOS_AVRMEGA-master\" />
+    <Folder Include="VIA_FreeRTOS_AVRMEGA-master\Example\" />
+    <Folder Include="VIA_FreeRTOS_AVRMEGA-master\FreeRTOSTraceDriver\" />
+    <Folder Include="VIA_FreeRTOS_AVRMEGA-master\src\" />
+    <Folder Include="VIA_FreeRTOS_AVRMEGA-master\src\serial" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="VIA_FreeRTOS_AVRMEGA-master\.gitignore">
+      <SubType>compile</SubType>
+    </None>
+    <None Include="VIA_FreeRTOS_AVRMEGA-master\readme.md">
+      <SubType>compile</SubType>
+    </None>
+    <None Include="VIA_FreeRTOS_AVRMEGA-master\src\.gitignore">
+      <SubType>compile</SubType>
+    </None>
+    <None Include="VIA_FreeRTOS_AVRMEGA-master\src\history.txt">
+      <SubType>compile</SubType>
+    </None>
+    <None Include="VIA_FreeRTOS_AVRMEGA-master\src\license.txt">
+      <SubType>compile</SubType>
+    </None>
+  </ItemGroup>
+  <Import Project="$(AVRSTUDIO_EXE_PATH)\\Vs\\Compiler.targets" />
+</Project>
