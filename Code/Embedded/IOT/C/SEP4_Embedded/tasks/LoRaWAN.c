@@ -6,11 +6,8 @@
  */ 
 #include <stddef.h>
 #include <stdio.h>
-
 #include <ATMEGA_FreeRTOS.h>
-
 #include <lora_driver.h>
-
 #include "LoRaWAN.h"
 #include "semphr.h"
 #include "plantdata.h"

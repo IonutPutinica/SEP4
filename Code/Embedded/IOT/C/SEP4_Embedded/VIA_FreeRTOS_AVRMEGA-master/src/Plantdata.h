@@ -15,7 +15,7 @@ typedef struct Plantdata{
 	int humidity;
 	uint16_t co2;
 	uint16_t light;
-	int water;
+	uint32_t water;
 	}Plantdata;
 	
 Plantdata plantdata;
