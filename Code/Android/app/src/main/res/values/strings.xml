@@ -1,0 +1,65 @@
+<resources>
+
+    <!--LoginActivity-->
+    <string name="app_name">SmartGarden</string>
+    <string name="login_text">Insert username and password</string>
+    <string name="username_hint">Insert username</string>
+    <string name="password_hint">Insert password</string>
+    <string name="login">Login</string>
+    <string name="register">Register</string>
+    <!--RegisterActivity-->
+    <string name="submit_register_text">Submit Register</string>
+    <string name="email_input_hint">Enter email</string>
+    <string name="username_input_hint">Enter username</string>
+    <string name="name_input_hint">Enter name</string>
+    <string name="password_input_hint">Enter password</string>
+    <!--MainActivity-->
+    <string name="welcome">Welcome:</string>
+    <string name="add_plant">Add Plant</string>
+    <string name="plant_list">Plant list</string>
+    <string name="user_acc">My account</string>
+    <!--AccountSettings-->
+    <string name="edit_profile">Edit credentials</string>
+    <!--ModifyAccount-->
+    <string name="edit_credentials">Edit desired credentials</string>
+    <string name="new_username_hint">Input new username</string>
+    <string name="new_email_hint">Input new email</string>
+    <string name="new_name_hint">Input new name</string>
+    <string name="new_password_hint">Input new password</string>
+    <!--CreatePlantProfile-->
+    <string name="create_plant_profile">Create plant profile</string>
+    <string name="input_plant_name_hint">Input plant name</string>
+    <string name="select_template">Select template</string>
+    <!--ViewPlantProfile-->
+    <string name="plant_name">Plant Name:</string>
+    <string name="current_temperature">Current temperature:</string>
+    <string name="profile_name">Profile name:</string>
+    <string name="co2_level">CO2 level:</string>
+    <string name="modify_plant_profile">Modify plant profile</string>
+    <string name="water_plant">Water plant</string>
+    <!--ModifyPlantProfile-->
+    <string name="modify_plant_profile_header">Modify plant attributes</string>
+    <string name="lower_range_temperature">Lowest allowed temperature level</string>
+    <string name="higher_range_temperature">Max allowed temperature level</string>
+    <string name="co2_level_slider">CO2 level</string>
+    <string name="water_amount">Watering amount</string>
+    <string name="savebtn">Save</string>
+    <string name="createbtn">Create</string>
+    <string name="watering_interval">Watering interval</string>
+
+    <!--Spinner in AddPlantFragment-->
+    <string-array name="spinner_choices">
+        <item>Not selected</item>
+        <item>Tropical</item>
+        <item>Desert</item>
+        <item>Mountain</item>
+    </string-array>
+
+
+    <!-- TODO: Remove or change this placeholder text -->
+    <string name="hello_blank_fragment">Hello blank fragment</string>
+    <string name="testRV">TestPlant</string>
+    <string name="humidity_level">Humidity level:</string>
+    <string name="light_level">Light level:</string>
+
+</resources>

@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="utf-8"?>
+<menu xmlns:android="http://schemas.android.com/apk/res/android">
+
+    <item
+        android:id="@+id/navigation_add_plant"
+        android:icon="@drawable/addplantbutton"
+        android:title="@string/add_plant" />
+
+    <item
+        android:id="@+id/navigation_recycler_plants"
+        android:icon="@drawable/plant"
+        android:title="@string/plant_list" />
+
+    <item
+        android:id="@+id/navigation_user_profile"
+        android:icon="@drawable/user"
+        android:title="@string/user_acc" />
+
+</menu>

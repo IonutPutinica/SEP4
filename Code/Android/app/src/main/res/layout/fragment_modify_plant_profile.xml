@@ -1,0 +1,120 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:orientation="vertical"
+    android:background="@drawable/backgroundlogin"
+    android:layout_height="match_parent">
+    <ScrollView
+        android:id="@+id/scrollmodifplant"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:orientation="vertical"
+            >
+    <TextView
+        android:id="@+id/modify_plant_profile_text"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="20dp"
+        android:layout_marginStart="40dp"
+        android:gravity="center"
+        android:textColor="@color/white"
+        android:text="@string/modify_plant_profile_header"
+        android:textSize="14pt" />
+
+
+
+        <EditText
+            android:id="@+id/min_range_temperature"
+            android:hint="@string/lower_range_temperature"
+            android:layout_width="285dp"
+            android:layout_marginTop="10dp"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center"
+            android:background="@color/white"
+            android:inputType="text"
+            android:padding="10dp"
+            android:paddingTop="25dp"  />
+
+
+        <EditText
+            android:id="@+id/max_range_temperature"
+            android:hint="@string/higher_range_temperature"
+            android:layout_width="285dp"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center"
+            android:layout_marginTop="10dp"
+            android:background="@color/white"
+            android:inputType="text"
+            android:padding="10dp"
+            android:paddingTop="25dp"  />
+
+
+        <EditText
+            android:id="@+id/humidity_level"
+            android:hint="@string/humidity_level"
+            android:layout_width="285dp"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center"
+            android:layout_marginTop="10dp"
+            android:background="@color/white"
+            android:inputType="text"
+            android:padding="10dp"
+            android:paddingTop="25dp"  />
+
+
+        <EditText
+            android:id="@+id/profile_name"
+            android:hint="@string/profile_name"
+            android:layout_width="285dp"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center"
+            android:layout_marginTop="10dp"
+            android:background="@color/white"
+            android:inputType="text"
+            android:padding="10dp"
+            android:paddingTop="25dp" />
+
+
+
+        <EditText
+            android:id="@+id/water_amount"
+            android:hint="@string/water_amount"
+            android:layout_width="285dp"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center"
+            android:layout_marginTop="10dp"
+            android:background="@color/white"
+            android:inputType="text"
+            android:padding="10dp"
+            android:paddingTop="25dp" />
+
+
+        <EditText
+            android:id="@+id/watering_interval"
+            android:hint="@string/water_amount"
+            android:layout_width="285dp"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center"
+            android:layout_marginTop="10dp"
+            android:background="@color/white"
+            android:inputType="text"
+            android:padding="10dp"
+            android:paddingTop="25dp"  />
+
+
+    <Button
+        android:id="@+id/savebutton"
+        android:layout_width="96dp"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="20dp"
+        android:layout_gravity="center"
+        android:text="Save"
+        android:textColor="@color/white"
+        android:background="@drawable/btn"
+        />
+        </LinearLayout>
+    </ScrollView>
+</LinearLayout>

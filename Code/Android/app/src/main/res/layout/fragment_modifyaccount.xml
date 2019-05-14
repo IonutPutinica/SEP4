@@ -1,0 +1,77 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical">
+<ScrollView
+    android:id="@+id/scrollmodifacc"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:orientation="vertical">
+
+    <TextView
+        android:layout_gravity="center_horizontal"
+        android:layout_marginTop="35dp"
+        android:textSize="14pt"
+        android:gravity="center"
+        android:id="@+id/edit_credentials_text"
+        android:layout_height="wrap_content"
+        android:layout_width="wrap_content"
+        android:textColor="@color/white"
+        android:text="@string/edit_credentials" />
+
+
+    <EditText
+        android:paddingTop="25dp"
+        android:id="@+id/newEmail_input"
+        android:layout_height="wrap_content"
+        android:layout_width="275dp"
+        android:layout_gravity="center"
+        android:layout_marginTop="10dp"
+        android:hint="@string/new_email_hint"
+        android:background="@color/white"
+        android:padding="10dp"
+        android:inputType="textEmailAddress"/>
+
+
+    <EditText
+        android:paddingTop="25dp"
+        android:id="@+id/newPassword_input"
+        android:layout_height="wrap_content"
+        android:layout_width="275dp"
+        android:layout_gravity="center"
+        android:layout_marginTop="10dp"
+        android:hint="@string/new_password_hint"
+        android:background="@color/white"
+        android:padding="10dp"
+        android:inputType="textPassword"/>
+
+    <Button
+        android:id="@+id/button_newcredsave"
+        android:layout_width="96dp"
+        android:layout_height="wrap_content"
+        android:layout_gravity="center"
+        android:layout_marginTop="28dp"
+        android:background="@drawable/btn"
+        android:gravity="center"
+        android:text="@string/savebtn"
+        android:textColor="@color/white"
+        />
+
+    <android.support.design.widget.FloatingActionButton
+        android:id="@+id/delete_profile"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_gravity="bottom|end"
+        android:layout_marginTop="190dp"
+        android:layout_marginEnd="14dp"
+        android:backgroundTint="#FFA07A"
+        android:src="@drawable/ic_delete_black_24dp" />
+
+</LinearLayout>
+</ScrollView>
+</LinearLayout>

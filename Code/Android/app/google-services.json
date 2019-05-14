@@ -1,0 +1,48 @@
+{
+  "project_info": {
+    "project_number": "137932179266",
+    "firebase_url": "https://green-house-d150a.firebaseio.com",
+    "project_id": "green-house-d150a",
+    "storage_bucket": "green-house-d150a.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:137932179266:android:79923b6113612f69",
+        "android_client_info": {
+          "package_name": "com.andteam.sep4greenhouse.view"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "137932179266-demn1n2dbssrf91brt15d18crq829536.apps.googleusercontent.com",
+          "client_type": 1,
+          "android_info": {
+            "package_name": "com.andteam.sep4greenhouse.view",
+            "certificate_hash": "d5a57767cd15db73e7ad9f64538fe483fd99f0b0"
+          }
+        },
+        {
+          "client_id": "137932179266-48cglbb2r68afgj2b8elk605lgp601vj.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyDue8ZgRr5DuXJtc7hoWTm3kPH0E_rM3UY"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "137932179266-48cglbb2r68afgj2b8elk605lgp601vj.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}

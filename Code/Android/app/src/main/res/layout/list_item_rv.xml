@@ -1,0 +1,45 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout
+    xmlns:android="http://schemas.android.com/apk/res/android" android:layout_width="match_parent"
+    android:layout_height="50dp"
+    android:orientation="horizontal"
+    android:background="#52FF70"
+
+    >
+        <TextView
+            android:layout_width="0dp"
+            android:clickable="true"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:paddingStart="20dp"
+            android:paddingTop="15dp"
+            android:text="@string/testRV"
+            android:textSize="15sp"
+            android:id="@+id/plant"
+            />
+
+    <ImageButton
+        android:layout_marginTop="8dp"
+        android:layout_marginRight="15dp"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:src="@drawable/pencil_edit_rv"
+        android:id="@+id/edit_profile_pencil"
+        android:background="#00000000"
+        android:clickable="true"
+        android:padding="7dp"
+        android:focusable="true" />
+
+    <ImageButton
+        android:layout_marginTop="8dp"
+        android:layout_marginRight="15dp"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:src="@drawable/trash_delete_rv"
+        android:id="@+id/delete_profile"
+        android:background="#00000000"
+        android:clickable="true"
+        android:padding="7dp"
+        android:focusable="true" />
+
+</LinearLayout>
