@@ -1,0 +1,92 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Mapping Space="C-S" xmlns="http://schemas.microsoft.com/ado/2009/11/mapping/cs">
+  <EntityContainerMapping StorageEntityContainer="SEPDimensionModelStoreContainer" CdmEntityContainer="SEPDimensionEntities">
+    <EntitySetMapping Name="D_Date">
+      <EntityTypeMapping TypeName="SEPDimensionModel.D_Date">
+        <MappingFragment StoreEntitySet="D_Date">
+          <ScalarProperty Name="dateKey" ColumnName="dateKey" />
+          <ScalarProperty Name="CalendarDate" ColumnName="CalendarDate" />
+          <ScalarProperty Name="Year" ColumnName="Year" />
+          <ScalarProperty Name="MonthName" ColumnName="MonthName" />
+          <ScalarProperty Name="Day" ColumnName="Day" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="D_Plant">
+      <EntityTypeMapping TypeName="SEPDimensionModel.D_Plant">
+        <MappingFragment StoreEntitySet="D_Plant">
+          <ScalarProperty Name="PlantKey" ColumnName="PlantKey" />
+          <ScalarProperty Name="B_PlantKey" ColumnName="B_PlantKey" />
+          <ScalarProperty Name="PlantName" ColumnName="PlantName" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="D_Time">
+      <EntityTypeMapping TypeName="SEPDimensionModel.D_Time">
+        <MappingFragment StoreEntitySet="D_Time">
+          <ScalarProperty Name="TimeKey" ColumnName="TimeKey" />
+          <ScalarProperty Name="TimeAltKey" ColumnName="TimeAltKey" />
+          <ScalarProperty Name="Time30" ColumnName="Time30" />
+          <ScalarProperty Name="Hour30" ColumnName="Hour30" />
+          <ScalarProperty Name="MinuteNumber" ColumnName="MinuteNumber" />
+          <ScalarProperty Name="SecondNumber" ColumnName="SecondNumber" />
+          <ScalarProperty Name="TimeInSecond" ColumnName="TimeInSecond" />
+          <ScalarProperty Name="HourlyBucket" ColumnName="HourlyBucket" />
+          <ScalarProperty Name="DayTimeBucketGroupKey" ColumnName="DayTimeBucketGroupKey" />
+          <ScalarProperty Name="DayTimeBucket" ColumnName="DayTimeBucket" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="F_CO2">
+      <EntityTypeMapping TypeName="SEPDimensionModel.F_CO2">
+        <MappingFragment StoreEntitySet="F_CO2">
+          <ScalarProperty Name="DateKey" ColumnName="DateKey" />
+          <ScalarProperty Name="TimeKey" ColumnName="TimeKey" />
+          <ScalarProperty Name="PlantKey" ColumnName="PlantKey" />
+          <ScalarProperty Name="Units_CO2" ColumnName="Units_CO2" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="F_Humidity">
+      <EntityTypeMapping TypeName="SEPDimensionModel.F_Humidity">
+        <MappingFragment StoreEntitySet="F_Humidity">
+          <ScalarProperty Name="DateKey" ColumnName="DateKey" />
+          <ScalarProperty Name="TimeKey" ColumnName="TimeKey" />
+          <ScalarProperty Name="PlantKey" ColumnName="PlantKey" />
+          <ScalarProperty Name="Units_Humidity" ColumnName="Units_Humidity" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="F_Light">
+      <EntityTypeMapping TypeName="SEPDimensionModel.F_Light">
+        <MappingFragment StoreEntitySet="F_Light">
+          <ScalarProperty Name="DateKey" ColumnName="DateKey" />
+          <ScalarProperty Name="TimeKey" ColumnName="TimeKey" />
+          <ScalarProperty Name="PlantKey" ColumnName="PlantKey" />
+          <ScalarProperty Name="Units_Light" ColumnName="Units_Light" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="F_Temperature">
+      <EntityTypeMapping TypeName="SEPDimensionModel.F_Temperature">
+        <MappingFragment StoreEntitySet="F_Temperature">
+          <ScalarProperty Name="DateKey" ColumnName="DateKey" />
+          <ScalarProperty Name="TimeKey" ColumnName="TimeKey" />
+          <ScalarProperty Name="PlantKey" ColumnName="PlantKey" />
+          <ScalarProperty Name="Units_Temperature" ColumnName="Units_Temperature" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="F_Watering">
+      <EntityTypeMapping TypeName="SEPDimensionModel.F_Watering">
+        <MappingFragment StoreEntitySet="F_Watering">
+          <ScalarProperty Name="DateKey" ColumnName="DateKey" />
+          <ScalarProperty Name="TimeKey" ColumnName="TimeKey" />
+          <ScalarProperty Name="PlantKey" ColumnName="PlantKey" />
+          <ScalarProperty Name="AmountOfWater" ColumnName="AmountOfWater" />
+          <ScalarProperty Name="HoursSinceWatering" ColumnName="HoursSinceWatering" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+  </EntityContainerMapping>
+</Mapping>

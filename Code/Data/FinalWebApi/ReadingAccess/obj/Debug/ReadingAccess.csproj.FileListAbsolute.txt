@@ -1,0 +1,12 @@
+C:\Users\coste\source\repos\FinalWebApi\ReadingAccess\bin\Debug\ReadingAccess.dll.config
+C:\Users\coste\source\repos\FinalWebApi\ReadingAccess\bin\Debug\ReadingAccess.dll
+C:\Users\coste\source\repos\FinalWebApi\ReadingAccess\bin\Debug\ReadingAccess.pdb
+C:\Users\coste\source\repos\FinalWebApi\ReadingAccess\bin\Debug\EntityFramework.dll
+C:\Users\coste\source\repos\FinalWebApi\ReadingAccess\bin\Debug\EntityFramework.SqlServer.dll
+C:\Users\coste\source\repos\FinalWebApi\ReadingAccess\bin\Debug\EntityFramework.xml
+C:\Users\coste\source\repos\FinalWebApi\ReadingAccess\bin\Debug\EntityFramework.SqlServer.xml
+C:\Users\coste\source\repos\FinalWebApi\ReadingAccess\obj\Debug\ReadingAccess.csprojAssemblyReference.cache
+C:\Users\coste\source\repos\FinalWebApi\ReadingAccess\obj\Debug\ReadingAccess.csproj.CoreCompileInputs.cache
+C:\Users\coste\source\repos\FinalWebApi\ReadingAccess\obj\Debug\ReadingAccess.csproj.CopyComplete
+C:\Users\coste\source\repos\FinalWebApi\ReadingAccess\obj\Debug\ReadingAccess.dll
+C:\Users\coste\source\repos\FinalWebApi\ReadingAccess\obj\Debug\ReadingAccess.pdb

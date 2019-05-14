@@ -1,0 +1,401 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Schema Namespace="SEPDimensionModel.Store" Provider="System.Data.SqlClient" ProviderManifestToken="2012" Alias="Self" xmlns:store="http://schemas.microsoft.com/ado/2007/12/edm/EntityStoreSchemaGenerator" xmlns:customannotation="http://schemas.microsoft.com/ado/2013/11/edm/customannotation" xmlns="http://schemas.microsoft.com/ado/2009/11/edm/ssdl">
+  <EntityType Name="D_Date">
+    <Key>
+      <PropertyRef Name="dateKey" />
+    </Key>
+    <Property Name="dateKey" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="CalendarDate" Type="datetime" />
+    <Property Name="Year" Type="nvarchar" MaxLength="50" />
+    <Property Name="MonthName" Type="nvarchar" MaxLength="50" />
+    <Property Name="Day" Type="nvarchar" MaxLength="50" />
+  </EntityType>
+  <EntityType Name="D_Plant">
+    <Key>
+      <PropertyRef Name="PlantKey" />
+    </Key>
+    <Property Name="PlantKey" Type="int" Nullable="false" />
+    <Property Name="B_PlantKey" Type="int" />
+    <Property Name="PlantName" Type="nchar" MaxLength="20" />
+  </EntityType>
+  <EntityType Name="D_Time">
+    <Key>
+      <PropertyRef Name="TimeKey" />
+    </Key>
+    <Property Name="TimeKey" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="TimeAltKey" Type="int" Nullable="false" />
+    <Property Name="Time30" Type="varchar" MaxLength="8" Nullable="false" />
+    <Property Name="Hour30" Type="tinyint" Nullable="false" />
+    <Property Name="MinuteNumber" Type="tinyint" Nullable="false" />
+    <Property Name="SecondNumber" Type="tinyint" Nullable="false" />
+    <Property Name="TimeInSecond" Type="int" Nullable="false" />
+    <Property Name="HourlyBucket" Type="varchar" MaxLength="15" Nullable="false" />
+    <Property Name="DayTimeBucketGroupKey" Type="int" Nullable="false" />
+    <Property Name="DayTimeBucket" Type="varchar" MaxLength="100" Nullable="false" />
+  </EntityType>
+  <!--Errors Found During Generation:
+warning 6002: The table/view 'SEPDimension.dbo.F_CO2' does not have a primary key defined. The key has been inferred and the definition was created as a read-only table/view.-->
+  <EntityType Name="F_CO2">
+    <Key>
+      <PropertyRef Name="DateKey" />
+      <PropertyRef Name="TimeKey" />
+      <PropertyRef Name="PlantKey" />
+    </Key>
+    <Property Name="DateKey" Type="int" Nullable="false" />
+    <Property Name="TimeKey" Type="int" Nullable="false" />
+    <Property Name="PlantKey" Type="int" Nullable="false" />
+    <Property Name="Units_CO2" Type="float" />
+  </EntityType>
+  <!--Errors Found During Generation:
+warning 6002: The table/view 'SEPDimension.dbo.F_Humidity' does not have a primary key defined. The key has been inferred and the definition was created as a read-only table/view.-->
+  <EntityType Name="F_Humidity">
+    <Key>
+      <PropertyRef Name="DateKey" />
+      <PropertyRef Name="TimeKey" />
+      <PropertyRef Name="PlantKey" />
+    </Key>
+    <Property Name="DateKey" Type="int" Nullable="false" />
+    <Property Name="TimeKey" Type="int" Nullable="false" />
+    <Property Name="PlantKey" Type="int" Nullable="false" />
+    <Property Name="Units_Humidity" Type="float" />
+  </EntityType>
+  <!--Errors Found During Generation:
+warning 6002: The table/view 'SEPDimension.dbo.F_Light' does not have a primary key defined. The key has been inferred and the definition was created as a read-only table/view.-->
+  <EntityType Name="F_Light">
+    <Key>
+      <PropertyRef Name="DateKey" />
+      <PropertyRef Name="TimeKey" />
+      <PropertyRef Name="PlantKey" />
+    </Key>
+    <Property Name="DateKey" Type="int" Nullable="false" />
+    <Property Name="TimeKey" Type="int" Nullable="false" />
+    <Property Name="PlantKey" Type="int" Nullable="false" />
+    <Property Name="Units_Light" Type="int" />
+  </EntityType>
+  <!--Errors Found During Generation:
+warning 6002: The table/view 'SEPDimension.dbo.F_Temperature' does not have a primary key defined. The key has been inferred and the definition was created as a read-only table/view.-->
+  <EntityType Name="F_Temperature">
+    <Key>
+      <PropertyRef Name="DateKey" />
+      <PropertyRef Name="TimeKey" />
+      <PropertyRef Name="PlantKey" />
+    </Key>
+    <Property Name="DateKey" Type="int" Nullable="false" />
+    <Property Name="TimeKey" Type="int" Nullable="false" />
+    <Property Name="PlantKey" Type="int" Nullable="false" />
+    <Property Name="Units_Temperature" Type="float" />
+  </EntityType>
+  <!--Errors Found During Generation:
+warning 6002: The table/view 'SEPDimension.dbo.F_Watering' does not have a primary key defined. The key has been inferred and the definition was created as a read-only table/view.-->
+  <EntityType Name="F_Watering">
+    <Key>
+      <PropertyRef Name="DateKey" />
+      <PropertyRef Name="TimeKey" />
+      <PropertyRef Name="PlantKey" />
+    </Key>
+    <Property Name="DateKey" Type="int" Nullable="false" />
+    <Property Name="TimeKey" Type="int" Nullable="false" />
+    <Property Name="PlantKey" Type="int" Nullable="false" />
+    <Property Name="AmountOfWater" Type="float" />
+    <Property Name="HoursSinceWatering" Type="float" />
+  </EntityType>
+  <!--Errors Found During Generation:
+warning 6013: The table/view 'SEPDimension.dbo.Readings' does not have a primary key defined and no valid primary key could be inferred. This table/view has been excluded. To use the entity, you will need to review your schema, add the correct keys, and uncomment it.
+        <EntityType Name="Readings">
+          <Property Name="PlantID" Type="int" />
+          <Property Name="PlantName" Type="char" MaxLength="25" />
+          <Property Name="Temperature" Type="float" />
+          <Property Name="Light" Type="int" />
+          <Property Name="CO2" Type="float" />
+          <Property Name="Humidity" Type="float" />
+          <Property Name="AmountOfWater" Type="float" />
+          <Property Name="HoursSinceWatering" Type="float" />
+          <Property Name="ReadingDate" Type="datetime" />
+        </EntityType>-->
+  <Association Name="FK_F_CO2_D_Date">
+    <End Role="D_Date" Type="Self.D_Date" Multiplicity="1" />
+    <End Role="F_CO2" Type="Self.F_CO2" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="D_Date">
+        <PropertyRef Name="dateKey" />
+      </Principal>
+      <Dependent Role="F_CO2">
+        <PropertyRef Name="DateKey" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_F_CO2_D_Plant">
+    <End Role="D_Plant" Type="Self.D_Plant" Multiplicity="1" />
+    <End Role="F_CO2" Type="Self.F_CO2" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="D_Plant">
+        <PropertyRef Name="PlantKey" />
+      </Principal>
+      <Dependent Role="F_CO2">
+        <PropertyRef Name="PlantKey" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_F_CO2_D_Time">
+    <End Role="D_Time" Type="Self.D_Time" Multiplicity="1" />
+    <End Role="F_CO2" Type="Self.F_CO2" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="D_Time">
+        <PropertyRef Name="TimeKey" />
+      </Principal>
+      <Dependent Role="F_CO2">
+        <PropertyRef Name="TimeKey" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_F_Humidity_D_Date">
+    <End Role="D_Date" Type="Self.D_Date" Multiplicity="1" />
+    <End Role="F_Humidity" Type="Self.F_Humidity" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="D_Date">
+        <PropertyRef Name="dateKey" />
+      </Principal>
+      <Dependent Role="F_Humidity">
+        <PropertyRef Name="DateKey" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_F_Humidity_D_Plant">
+    <End Role="D_Plant" Type="Self.D_Plant" Multiplicity="1" />
+    <End Role="F_Humidity" Type="Self.F_Humidity" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="D_Plant">
+        <PropertyRef Name="PlantKey" />
+      </Principal>
+      <Dependent Role="F_Humidity">
+        <PropertyRef Name="PlantKey" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_F_Humidity_D_Time">
+    <End Role="D_Time" Type="Self.D_Time" Multiplicity="1" />
+    <End Role="F_Humidity" Type="Self.F_Humidity" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="D_Time">
+        <PropertyRef Name="TimeKey" />
+      </Principal>
+      <Dependent Role="F_Humidity">
+        <PropertyRef Name="TimeKey" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_F_Light_D_Date">
+    <End Role="D_Date" Type="Self.D_Date" Multiplicity="1" />
+    <End Role="F_Light" Type="Self.F_Light" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="D_Date">
+        <PropertyRef Name="dateKey" />
+      </Principal>
+      <Dependent Role="F_Light">
+        <PropertyRef Name="DateKey" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_F_Light_D_Plant">
+    <End Role="D_Plant" Type="Self.D_Plant" Multiplicity="1" />
+    <End Role="F_Light" Type="Self.F_Light" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="D_Plant">
+        <PropertyRef Name="PlantKey" />
+      </Principal>
+      <Dependent Role="F_Light">
+        <PropertyRef Name="PlantKey" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_F_Light_D_Time">
+    <End Role="D_Time" Type="Self.D_Time" Multiplicity="1" />
+    <End Role="F_Light" Type="Self.F_Light" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="D_Time">
+        <PropertyRef Name="TimeKey" />
+      </Principal>
+      <Dependent Role="F_Light">
+        <PropertyRef Name="TimeKey" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_F_Temperature_D_Date">
+    <End Role="D_Date" Type="Self.D_Date" Multiplicity="1" />
+    <End Role="F_Temperature" Type="Self.F_Temperature" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="D_Date">
+        <PropertyRef Name="dateKey" />
+      </Principal>
+      <Dependent Role="F_Temperature">
+        <PropertyRef Name="DateKey" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_F_Temperature_D_Plant">
+    <End Role="D_Plant" Type="Self.D_Plant" Multiplicity="1" />
+    <End Role="F_Temperature" Type="Self.F_Temperature" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="D_Plant">
+        <PropertyRef Name="PlantKey" />
+      </Principal>
+      <Dependent Role="F_Temperature">
+        <PropertyRef Name="PlantKey" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_F_Temperature_D_Time">
+    <End Role="D_Time" Type="Self.D_Time" Multiplicity="1" />
+    <End Role="F_Temperature" Type="Self.F_Temperature" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="D_Time">
+        <PropertyRef Name="TimeKey" />
+      </Principal>
+      <Dependent Role="F_Temperature">
+        <PropertyRef Name="TimeKey" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_F_Watering_D_Date">
+    <End Role="D_Date" Type="Self.D_Date" Multiplicity="1" />
+    <End Role="F_Watering" Type="Self.F_Watering" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="D_Date">
+        <PropertyRef Name="dateKey" />
+      </Principal>
+      <Dependent Role="F_Watering">
+        <PropertyRef Name="DateKey" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_F_Watering_D_Plant">
+    <End Role="D_Plant" Type="Self.D_Plant" Multiplicity="1" />
+    <End Role="F_Watering" Type="Self.F_Watering" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="D_Plant">
+        <PropertyRef Name="PlantKey" />
+      </Principal>
+      <Dependent Role="F_Watering">
+        <PropertyRef Name="PlantKey" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_F_Watering_D_Time">
+    <End Role="D_Time" Type="Self.D_Time" Multiplicity="1" />
+    <End Role="F_Watering" Type="Self.F_Watering" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="D_Time">
+        <PropertyRef Name="TimeKey" />
+      </Principal>
+      <Dependent Role="F_Watering">
+        <PropertyRef Name="TimeKey" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <EntityContainer Name="SEPDimensionModelStoreContainer">
+    <EntitySet Name="D_Date" EntityType="Self.D_Date" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="D_Plant" EntityType="Self.D_Plant" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="D_Time" EntityType="Self.D_Time" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="F_CO2" EntityType="Self.F_CO2" store:Type="Tables" store:Schema="dbo">
+      <DefiningQuery>SELECT 
+    [F_CO2].[DateKey] AS [DateKey], 
+    [F_CO2].[TimeKey] AS [TimeKey], 
+    [F_CO2].[PlantKey] AS [PlantKey], 
+    [F_CO2].[Units_CO2] AS [Units_CO2]
+    FROM [dbo].[F_CO2] AS [F_CO2]</DefiningQuery>
+    </EntitySet>
+    <EntitySet Name="F_Humidity" EntityType="Self.F_Humidity" store:Type="Tables" store:Schema="dbo">
+      <DefiningQuery>SELECT 
+    [F_Humidity].[DateKey] AS [DateKey], 
+    [F_Humidity].[TimeKey] AS [TimeKey], 
+    [F_Humidity].[PlantKey] AS [PlantKey], 
+    [F_Humidity].[Units_Humidity] AS [Units_Humidity]
+    FROM [dbo].[F_Humidity] AS [F_Humidity]</DefiningQuery>
+    </EntitySet>
+    <EntitySet Name="F_Light" EntityType="Self.F_Light" store:Type="Tables" store:Schema="dbo">
+      <DefiningQuery>SELECT 
+    [F_Light].[DateKey] AS [DateKey], 
+    [F_Light].[TimeKey] AS [TimeKey], 
+    [F_Light].[PlantKey] AS [PlantKey], 
+    [F_Light].[Units_Light] AS [Units_Light]
+    FROM [dbo].[F_Light] AS [F_Light]</DefiningQuery>
+    </EntitySet>
+    <EntitySet Name="F_Temperature" EntityType="Self.F_Temperature" store:Type="Tables" store:Schema="dbo">
+      <DefiningQuery>SELECT 
+    [F_Temperature].[DateKey] AS [DateKey], 
+    [F_Temperature].[TimeKey] AS [TimeKey], 
+    [F_Temperature].[PlantKey] AS [PlantKey], 
+    [F_Temperature].[Units_Temperature] AS [Units_Temperature]
+    FROM [dbo].[F_Temperature] AS [F_Temperature]</DefiningQuery>
+    </EntitySet>
+    <EntitySet Name="F_Watering" EntityType="Self.F_Watering" store:Type="Tables" store:Schema="dbo">
+      <DefiningQuery>SELECT 
+    [F_Watering].[DateKey] AS [DateKey], 
+    [F_Watering].[TimeKey] AS [TimeKey], 
+    [F_Watering].[PlantKey] AS [PlantKey], 
+    [F_Watering].[AmountOfWater] AS [AmountOfWater], 
+    [F_Watering].[HoursSinceWatering] AS [HoursSinceWatering]
+    FROM [dbo].[F_Watering] AS [F_Watering]</DefiningQuery>
+    </EntitySet>
+    <AssociationSet Name="FK_F_CO2_D_Date" Association="Self.FK_F_CO2_D_Date">
+      <End Role="D_Date" EntitySet="D_Date" />
+      <End Role="F_CO2" EntitySet="F_CO2" />
+    </AssociationSet>
+    <AssociationSet Name="FK_F_CO2_D_Plant" Association="Self.FK_F_CO2_D_Plant">
+      <End Role="D_Plant" EntitySet="D_Plant" />
+      <End Role="F_CO2" EntitySet="F_CO2" />
+    </AssociationSet>
+    <AssociationSet Name="FK_F_CO2_D_Time" Association="Self.FK_F_CO2_D_Time">
+      <End Role="D_Time" EntitySet="D_Time" />
+      <End Role="F_CO2" EntitySet="F_CO2" />
+    </AssociationSet>
+    <AssociationSet Name="FK_F_Humidity_D_Date" Association="Self.FK_F_Humidity_D_Date">
+      <End Role="D_Date" EntitySet="D_Date" />
+      <End Role="F_Humidity" EntitySet="F_Humidity" />
+    </AssociationSet>
+    <AssociationSet Name="FK_F_Humidity_D_Plant" Association="Self.FK_F_Humidity_D_Plant">
+      <End Role="D_Plant" EntitySet="D_Plant" />
+      <End Role="F_Humidity" EntitySet="F_Humidity" />
+    </AssociationSet>
+    <AssociationSet Name="FK_F_Humidity_D_Time" Association="Self.FK_F_Humidity_D_Time">
+      <End Role="D_Time" EntitySet="D_Time" />
+      <End Role="F_Humidity" EntitySet="F_Humidity" />
+    </AssociationSet>
+    <AssociationSet Name="FK_F_Light_D_Date" Association="Self.FK_F_Light_D_Date">
+      <End Role="D_Date" EntitySet="D_Date" />
+      <End Role="F_Light" EntitySet="F_Light" />
+    </AssociationSet>
+    <AssociationSet Name="FK_F_Light_D_Plant" Association="Self.FK_F_Light_D_Plant">
+      <End Role="D_Plant" EntitySet="D_Plant" />
+      <End Role="F_Light" EntitySet="F_Light" />
+    </AssociationSet>
+    <AssociationSet Name="FK_F_Light_D_Time" Association="Self.FK_F_Light_D_Time">
+      <End Role="D_Time" EntitySet="D_Time" />
+      <End Role="F_Light" EntitySet="F_Light" />
+    </AssociationSet>
+    <AssociationSet Name="FK_F_Temperature_D_Date" Association="Self.FK_F_Temperature_D_Date">
+      <End Role="D_Date" EntitySet="D_Date" />
+      <End Role="F_Temperature" EntitySet="F_Temperature" />
+    </AssociationSet>
+    <AssociationSet Name="FK_F_Temperature_D_Plant" Association="Self.FK_F_Temperature_D_Plant">
+      <End Role="D_Plant" EntitySet="D_Plant" />
+      <End Role="F_Temperature" EntitySet="F_Temperature" />
+    </AssociationSet>
+    <AssociationSet Name="FK_F_Temperature_D_Time" Association="Self.FK_F_Temperature_D_Time">
+      <End Role="D_Time" EntitySet="D_Time" />
+      <End Role="F_Temperature" EntitySet="F_Temperature" />
+    </AssociationSet>
+    <AssociationSet Name="FK_F_Watering_D_Date" Association="Self.FK_F_Watering_D_Date">
+      <End Role="D_Date" EntitySet="D_Date" />
+      <End Role="F_Watering" EntitySet="F_Watering" />
+    </AssociationSet>
+    <AssociationSet Name="FK_F_Watering_D_Plant" Association="Self.FK_F_Watering_D_Plant">
+      <End Role="D_Plant" EntitySet="D_Plant" />
+      <End Role="F_Watering" EntitySet="F_Watering" />
+    </AssociationSet>
+    <AssociationSet Name="FK_F_Watering_D_Time" Association="Self.FK_F_Watering_D_Time">
+      <End Role="D_Time" EntitySet="D_Time" />
+      <End Role="F_Watering" EntitySet="F_Watering" />
+    </AssociationSet>
+  </EntityContainer>
+</Schema>
