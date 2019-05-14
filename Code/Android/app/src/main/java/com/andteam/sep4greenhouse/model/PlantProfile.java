@@ -1,11 +1,14 @@
 package com.andteam.sep4greenhouse.model;
 
+import com.google.gson.annotations.SerializedName;
+
 import java.io.Serializable;
 
 public class PlantProfile implements Serializable {
 
-
+    @SerializedName("plantID")
     private int profileId;
+    @SerializedName("plantName")
     private String name;
     private double water;
     private int wInterval;
@@ -19,7 +22,6 @@ public class PlantProfile implements Serializable {
         this.plant = plant;
     }
 
-
     public String getName() {
         return name;
     }
@@ -31,7 +33,6 @@ public class PlantProfile implements Serializable {
     public int getwInterval() {
         return wInterval;
     }
-
 
     public PlantDTO getPlant() {
         return plant;

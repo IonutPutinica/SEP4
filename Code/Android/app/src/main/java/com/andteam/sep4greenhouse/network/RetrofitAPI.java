@@ -20,7 +20,7 @@ public interface RetrofitAPI {
 //    Call<PlantResponse> getPlantProfileData(@Path("pId") int id);
 
     // 2
-    @GET("/plantprofile")
+    @GET("/api/GetAllPlants")
     Call<List<PlantProfile>> getAllPlantProfiles();
 
     // 3

@@ -42,8 +42,6 @@ public class ViewPlantProfileActivity extends AppCompatActivity {
         readOnlyCO2Level.setText(Double.toString(plant.getCO2()));
         readOnlyLightLevel.setText(Integer.toString(plant.getLight()));
 
-
-
         waterPlantButton = findViewById(R.id.water_plant_button);
 
         waterPlantButton.setOnClickListener(new View.OnClickListener() {

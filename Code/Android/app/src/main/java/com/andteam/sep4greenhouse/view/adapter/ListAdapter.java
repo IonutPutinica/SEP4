@@ -47,7 +47,7 @@ public class ListAdapter extends RecyclerView.Adapter<ListAdapter.ViewHolder> {
 
     public void setProfiles(List<PlantProfile> profiles) {
         this.profiles = profiles;
-
+        notifyDataSetChanged();
     }
 
     @Override

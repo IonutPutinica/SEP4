@@ -43,7 +43,6 @@ public class ModifyAccountFragment extends Fragment {
 
         user = FirebaseAuth.getInstance().getCurrentUser();
 
-        //email.setText(user.getEmail().toString());
         saveNewCredentials = view.findViewById(R.id.button_newcredsave);
         saveNewCredentials.setOnClickListener(new View.OnClickListener() {
             @Override

@@ -31,8 +31,6 @@ public class ModifyPlantProfile implements Callback<Void> {
         call.enqueue(this);
     }
 
-
-
     @Override
     public void onResponse(Call<Void> call, Response<Void> response) {
 

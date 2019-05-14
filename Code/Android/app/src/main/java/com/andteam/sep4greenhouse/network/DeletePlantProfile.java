@@ -44,6 +44,6 @@ public class DeletePlantProfile implements Callback<Void> {
     @Override
     public void onFailure(Call<Void> call, Throwable t) {
         callback.onReturn(false);
-        Log.d("Login failed", t.toString());
+        Log.d("Delete failed", t.toString());
     }
 }

@@ -52,7 +52,8 @@ public class ViewPlantsViewModel extends AndroidViewModel implements AllPlantsCa
 
     @Override
     public void onReturn(List<PlantProfile> response) {
-        profilesLiveData.setValue(profiles);
+        profiles = response;
+        profilesLiveData.setValue(response);
     }
 
     // Callback method for add/modify//delete request
@@ -63,6 +64,4 @@ public class ViewPlantsViewModel extends AndroidViewModel implements AllPlantsCa
         else
             Toast.makeText(this.getApplication(), "Task failed successfully", Toast.LENGTH_LONG).show();
     }
-
-
 }
